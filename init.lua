@@ -948,6 +948,7 @@ require('lazy').setup({
   {
     'github/copilot.vim',
     branch = 'release',
+    ft = { 'python', 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
   },
   {
     'tpope/vim-fugitive',
