@@ -656,6 +656,8 @@ require('lazy').setup({
             },
           },
         },
+
+        texlab = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -671,6 +673,8 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'latexindent',
+        'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -730,6 +734,8 @@ require('lazy').setup({
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        tex = { 'latexindent' },
+        vue = { 'prettier' }
       },
     },
   },
@@ -961,6 +967,8 @@ require('lazy').setup({
     init = function()
       -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = 'zathura'
+      vim.g.vimtex_indent_enable = 1
+
     end,
   },
 
@@ -1014,3 +1022,12 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- PERSONAL CONFIG --
+
+-- vim.api.nvim_create_autocmd({ 'BufEnter' }, {
+--   pattern = '*.tex',
+--   command = "Copilot disable"
+-- })
+--
+
