@@ -735,7 +735,7 @@ require('lazy').setup({
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
         tex = { 'latexindent' },
-        vue = { 'prettier' }
+        vue = { 'prettier' },
       },
     },
   },
@@ -968,7 +968,6 @@ require('lazy').setup({
       -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = 'zathura'
       vim.g.vimtex_indent_enable = 1
-
     end,
   },
 
@@ -1030,4 +1029,3 @@ require('lazy').setup({
 --   command = "Copilot disable"
 -- })
 --
-
