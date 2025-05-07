@@ -658,6 +658,8 @@ require('lazy').setup({
         },
 
         texlab = {},
+        -- jdtls = {},
+
       }
 
       -- Ensure the servers and tools above are installed
@@ -970,6 +972,12 @@ require('lazy').setup({
       vim.g.vimtex_indent_enable = 1
 
     end,
+  },
+  -- {
+  --   'nvim-java/nvim-java'
+  -- },
+  {
+    'mfussenegger/nvim-jdtls'
   },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
